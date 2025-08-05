@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="a.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF Chatbot</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-pIVp3ZH4E3QoXhW+2VpX+6G/Dr+xNk6Qe0xD1iHH4K8/6J3hIXyV2hKUOjapqULF+86w8h2F2u5F7aW0j9f0/A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="header">
+    <i class="fas fa-file-pdf"></i> PDF Chatbot
+  </div>
+  <div class="container">
+    <!-- Chat Section -->
+    <div class="chat-container">
+      <div class="chat-header">
+        <i class="fas fa-comments"></i> Chat
+      </div>
+      <div class="chatbox" id="chatbox"></div>
+      <div class="chat-input">
+        <!-- Allow multiple PDF uploads -->
+        <input type="file" id="pdfFile" accept="application/pdf" multiple />
+        <input type="text" id="questionInput" placeholder="Ask a question..." />
+        <button onclick="askQuestion()"><i class="fas fa-paper-plane"></i> Ask</button>
+        <button onclick="startVoiceInput()"><i class="fas fa-microphone"></i> Voice Input</button>
+        <button onclick="summarizeDocument()"><i class="fas fa-file-alt"></i> Summarize All</button>
+        <button onclick="summarizeSelection()"><i class="fas fa-file-alt"></i> Summarize Selection</button>
+        <button id="moreButton" style="display: none;" onclick="showMoreAnswers()"><i class="fas fa-ellipsis-h"></i> More</button>
+      </div>
+    </div>
+    <!-- PDF Viewer Section -->
+    <div class="pdf-container" id="pdfViewer">
+      <!-- PDF pages from all documents will be appended here -->
+    </div>
+  </div>
+  <div class="container">
+    <div class="chat-container">
+      <div class="chat-header">
+        <i class="fas fa-info-circle"></i> Instructions
+      </div>
+      <div class="chatbox">
+        <div class="message bot-message">
+          1. Upload one or more PDF files using the file input above.<br>
+          2. Click on any PDF page to toggle its selection (glowing border) for a section summary.<br>
+          3. Ask a question to get relevant answers from the PDFs.<br>
+          4. Click "More" to see additional answers if available.<br>
+          5. Click "Voice Input" to ask a question using your microphone.<br>
+          6. Click "Summarize All" to generate a summary of the entire document.<br>
+          7. Click "Summarize Selection" to generate a focused summary of the selected pages.<br>
+          8. Visual summaries: Pages corresponding to key summary sentences will glow with an accent dashed border.
+        </div>
+      </div>
+    </div>
+    <button id="toggle" onclick="change()">Color</button>
+    <button id="blue" onclick="c()"></button>
+    <button id="s" onclick="d()"></button>
+    <button id="t" onclick="b()"></button>
+    <button id="o" onclick="navy()"></button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="a.js"></script>
+</body>
+</html>
