@@ -1,8 +1,10 @@
 # 🤖 BELBot – Offline AI Chatbot for PDFs
 
 BELBot is an AI-powered chatbot that allows users to ask questions from PDF documents and receive relevant paragraph-based answers. It works fully offline, ensuring privacy and accessibility even without an internet connection. Ideal for students, professionals, and researchers dealing with complex documents.
-## WATCH DEMO (ON MY YOUTUBE CHANNEL
-[![Watch the demo]([https://img.youtube.com/vi/cHvCYgIVpN4/0.jpg)](https://youtu.be/cHvCYgIVpN4](https://youtu.be/o5S9qaXSJWQ))
+## 📺 BelBot Demo (On my YouTube channel)
+
+[![Watch the demo](https://img.youtube.com/vi/o5S9qaXSJWQ/0.jpg)](https://youtu.be/o5S9qaXSJWQ)
+
 ## 🌟 Features
 
 - Ask questions directly from uploaded PDFs and get contextual answers
